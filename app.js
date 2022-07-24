@@ -9,9 +9,15 @@ por consola la suma de los dos parametros.
 1.3 Ejecuta esta función pasando dos parametros*/
 
 
- const sumar = (a =10,b= 20) =>{
+/* const sumar = (a =10,b= 20) =>{
     console.log( a + b)
  }
 
  let resultado = sumar();
- console.log(resultado)
+ console.log(resultado)*/
+
+ const sumar = () =>{
+    console.log("Hola ")
+ }
+
+ sumar();
