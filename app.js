@@ -30,5 +30,9 @@ const sumar2 = (c) =>{
  sumar2();
 
 
- 
+ //1.3 Ejecuta esta función pasando dos parametros
 
+ const sumar2 = (c) =>{
+    console.log("Hola" +" "+ c)
+ }
+ sumar2();
