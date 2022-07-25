@@ -154,19 +154,62 @@ const users1 = [
  /*users1.map(user => user.name.startsWith("A")?user.name="Anacleto":user.name)
 console.log(users1);*/
 
-
 const listValues = users1.map(user=>(({name:user.name})));
 console.log(listValues);
-
 listValues.map(nombre=>{
    if(nombre.name.startsWith("A")){
       nombre.name="Anacleto";
    }else{
-      console.log("Valor por default")
+      console.log("Valor por default");
    }
 })
-
 console.log(listValues);
+
+/*4.3 Dado el siguiente array, devuelve una lista que contenga los valores 
+de la propiedad .name |y añade al valor de .name el string '(Visitado)' 
+cuando el valor de la propiedad isVisited = true.*/
+
+
+const cities = [
+	{isVisited:true, name: 'Tokyo'}, 
+	{isVisited:false, name: 'Madagascar'},
+	{isVisited:true, name: 'Amsterdam'}, 
+	{isVisited:false, name: 'Seul'}
+];
+   
+
+cities.map(value => (value.isVisited === true)? value.name = value.name ="(Visitado)": value.name)
+console.log(cities);
+/*5.1 Dado el siguiente array, utiliza .filter() para generar un nuevo array 
+con los valores que sean mayor que 18*/
+const ages = [22, 14, 24, 55, 65, 21, 12, 13, 90];
+
+
+const maxAges = ages.filter(value =>
+     value > 18
+)
+console.log(maxAges);
+
+
+     
+     
+
+     
+
+
+  
+
+
+   
+
+
+
+
+
+
+
+
+
 
 
 
