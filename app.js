@@ -255,9 +255,9 @@ const streamers4 = streamers2.filter((streamer) => {
  //Ademas de esto lo que vamos a hacer aqui es con un condicional ve que se cumple lo anterior 
  //y la condicion de la edad, y le transformamos el juego mas jugado en mayuscula
      streamer.gameMorePlayed = streamer.gameMorePlayed.toUpperCase();
-   }
- 
+   } 
    return toReturn;
+
  });
  
  console.log(streamers4);
@@ -269,17 +269,22 @@ const streamers4 = streamers2.filter((streamer) => {
 los streamers que incluyan la palabra introducida en el input. De esta forma, si 
 introduzco 'Ru' me deberia de mostrar solo el streamer 'Rubius'. Si
 introduzco 'i', me deberia de mostrar el streamer 'Rubius' e 'Ibai'.*/
-
-/*const streamers = [
+const streamers6 = [
 	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
 	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
 	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
 	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
-];*/
+];
   
+  //! SIN TERMINAR ESTE EJERCICIO
 
 
-   
+  //6.1 Dado el siguiente array, usa .find() para econtrar el número 100.
+  const numbers = [32, 21, 63, 95, 100, 67, 43];
+
+ const findNumber = numbers.find(number => number > 95 )
+
+   console.log(findNumber)
 
 
 
