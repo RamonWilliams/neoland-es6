@@ -239,11 +239,43 @@ const streamers3 = streamers2.filter(person =>{
 })
 console.log(streamers3);
 
-     
-     
 
 
+/*5.5 utiliza .filter() para generar un nuevo array con los streamers que incluyan 
+el caracter 'Legends' en su propiedad .gameMorePlayed. Recomendamos usar la funcion 
+.includes() para la comprobación.
+Además, pon el valor de la propiedad .gameMorePlayed a MAYUSCULAS cuando 
+.age sea mayor que 35.*/
 
+const streamers4 = streamers2.filter((streamer) => {
+   const toReturn = streamer.gameMorePlayed.toLowerCase().includes("legends");
+ //Aqui comparamos que el streamer incluya legends en el juego más jugado y lo pasamos 
+ //a minuscula para que de igual si lo buscamos con mayuscula o minuscula
+   if (toReturn && streamer.age > 35) {
+ //Ademas de esto lo que vamos a hacer aqui es con un condicional ve que se cumple lo anterior 
+ //y la condicion de la edad, y le transformamos el juego mas jugado en mayuscula
+     streamer.gameMorePlayed = streamer.gameMorePlayed.toUpperCase();
+   }
+ 
+   return toReturn;
+ });
+ 
+ console.log(streamers4);
+
+
+ 
+   
+/*5.6 Dado el siguiente html y javascript, utiliza .filter() para mostrar por consola 
+los streamers que incluyan la palabra introducida en el input. De esta forma, si 
+introduzco 'Ru' me deberia de mostrar solo el streamer 'Rubius'. Si
+introduzco 'i', me deberia de mostrar el streamer 'Rubius' e 'Ibai'.*/
+
+/*const streamers = [
+	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
+	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
+	{name: 'Reven', age: 43, gameMorePlayed: 'League of Legends'},
+	{name: 'AuronPlay', age: 33, gameMorePlayed: 'Among Us'}
+];*/
   
 
 
