@@ -284,7 +284,26 @@ const streamers6 = [
 
  const findNumber = numbers.find(number => number > 95 )
 
-   console.log(findNumber)
+   console.log(findNumber);
+
+
+   //6.2 Dado el siguiente array, usa .find() para econtrar la pelicula del año 2010.
+
+const movies = [
+	{title: 'Madagascar', stars: 4.5, date: 2015},
+	{title: 'Origen', stars: 5, date: 2010},
+	{title: 'Your Name', stars: 5, date: 2016}
+]
+
+const findMovie = movies.find(movie => {
+   movie.date === 2010
+   return movie.date === 2010
+}       
+      
+)
+console.log(findMovie);
+
+
 
 
 
