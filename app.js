@@ -60,13 +60,16 @@ const [fruta1,fruta2,fruta3] = fruits;
 console.log(fruta1);
 
 /*2.3 En base al siguiente javascript, usa destructuring para crear 2 
-variables igualandolo a la función e imprimiendolo por consola.
+variables igualandolo a la función e imprimiendolo por consola.*/
 
 const animalFunction = () => {
     return {name: 'Bengal Tiger', race: 'Tiger'}
-};*/
+};
 
+let {name} = animalFunction()
+let {race} = animalFunction()
 
+console.log(name)
 
 /*2.4 En base al siguiente javascript, usa destructuring para crear las 
 variables name y itv con sus respectivos valores. Posteriormente crea 
@@ -75,12 +78,11 @@ y comprueba que todo esta bien imprimiendolo.*/
 
 const car = {name: 'Mazda 6', itv: [2015, 2011, 2020] };
 
-const{name,itv} = car;
-console.log(name);
+/*const{name,itv} = car;
 console.log(itv);
 
 const[itv1,itv2,itv3] = itv;
-console.log(itv1);
+console.log(itv1);*/
 
 
 /*Iteración #3: Spread Operator
@@ -302,6 +304,42 @@ const findMovie = movies.find(movie => {
       
 )
 console.log(findMovie);
+
+
+/*6.3 Dado el siguiente javascript, usa .find() para econtrar el alien de nombre 
+'Cucushumushu' y la mutación 'Porompompero'. Una vez que los encuentres, usa 
+spread operator para fusionarlos teniendo en cuenta que el objeto de la mutación 
+lo queremos meter en la propiedad .mutation del objeto fusionado.*/
+const aliens = [
+	{name: 'Zalamero', planet: 'Eden', age: 4029},
+	{name: 'Paktu', planet: 'Andromeda', age: 32},
+	{name: 'Cucushumushu', planet: 'Marte', age: 503021}
+];
+const mutations = [
+	{name: 'Porompompero', description: 'Hace que el alien pueda adquirir la habilidad de tocar el tambor'},
+	{name: 'Fly me to the moon', description: 'Permite volar, solo y exclusivamente a la luna'},
+	{name: 'Andando que es gerundio', description: 'Invoca a un señor mayor como Personal Trainer'}
+];
+
+
+const alienName = aliens.find(alien =>{
+   alien.name === "Cucushumushu"
+   return alien.name ==="Cucushumushu"
+})
+console.log(alienName);
+
+
+
+const mutationName = mutations.find(mutant =>{
+   mutant.name ==="Porompompero"
+   return mutant.name === "Porompompero"
+})
+console.log(mutationName);
+
+
+
+const alienMutation = {...alienName, mutationName}
+console.log(alienMutation);
 
 
 
