@@ -106,4 +106,13 @@ const pointsLis3 = [54,87,99,65,32];
  const generalPointlist = [... pointsList2, ...pointsLis3];
  console.log(generalPointlist);
 
+ /*3.4 Dado los siguientes objetos. Crea un nuevo objeto fusionando los dos 
+con spread operators.*/
+const toy1 = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
+const toyUpdate = {lights: 'rgb', power: ['Volar like a dragon', 'MoonWalk']};
+
+
+const generalToy ={...toy1,...toyUpdate}
+console.log(generalToy);
+
  
