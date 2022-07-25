@@ -136,6 +136,39 @@ const users = [
 ];
 
 
-const onlyName = users.map(user =>({text:user.name}));
+const onlyName = users.map(user =>({name:user.name}));
 console.log(onlyName);
+
+/*4.2 Dado el siguiente array, devuelve una lista que contenga los valores 
+de la propiedad .name y cambia el nombre a 'Anacleto' en caso de que 
+empiece por 'A'.*/
+
+const users1 = [
+	{id: 1, name: 'Abel'},
+	{id:2, name: 'Julia'},
+	{id:3, name: 'Pedro'},
+	{id:4, name: 'Amanda'}
+];
+
+//Ayuda de Segio
+ /*users1.map(user => user.name.startsWith("A")?user.name="Anacleto":user.name)
+console.log(users1);*/
+
+
+const listValues = users1.map(user=>(({name:user.name})));
+console.log(listValues);
+
+listValues.map(nombre=>{
+   if(nombre.name.startsWith("A")){
+      nombre.name="Anacleto";
+   }else{
+      console.log("Valor por default")
+   }
+})
+
+console.log(listValues);
+
+
+
+
 
