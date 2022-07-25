@@ -83,3 +83,10 @@ const[itv1,itv2,itv3] = itv;
 console.log(itv1);
 
 
+/*Iteración #3: Spread Operator
+3.1 Dado el siguiente array, crea una copia usando spread operators.*/
+
+const pointsList = [32, 54, 21, 64, 75, 43];
+ const copyPointList = [...pointsList];
+
+
