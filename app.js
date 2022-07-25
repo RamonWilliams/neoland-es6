@@ -78,11 +78,12 @@ y comprueba que todo esta bien imprimiendolo.*/
 
 const car = {name: 'Mazda 6', itv: [2015, 2011, 2020] };
 
-/*const{name,itv} = car;
+const{nombre,itv} = car;
 console.log(itv);
 
+
 const[itv1,itv2,itv3] = itv;
-console.log(itv1);*/
+console.log(itv3)
 
 
 /*Iteración #3: Spread Operator
@@ -341,13 +342,31 @@ console.log(mutationName);
 const alienMutation = {...alienName, mutationName}
 console.log(alienMutation);
 
+//Iteración #7: Reduce
 
+/*7.1 Dado el siguiente array, haz una suma de todos las notas de los examenes de 
+los alumnos usando la función .reduce().*/
 
+const exams = [
+   {name: 'Yuyu Cabeza Crack', score: 5}, 
+   {name: 'Maria Aranda Jimenez', score: 1}, 
+   {name: 'Cristóbal Martínez Lorenzo', score: 6}, 
+   {name: 'Mercedez Regrera Brito', score: 7},
+   {name: 'Pamela Anderson', score: 3},
+   {name: 'Enrique Perez Lijó', score: 6},
+   {name: 'Pedro Benitez Pacheco', score: 8},
+   {name: 'Ayumi Hamasaki', score: 4},
+   {name: 'Robert Kiyosaki', score: 2},
+   {name: 'Keanu Reeves', score: 10}
+];
 
+const scores = exams.map(nota => nota.score )
+console.log(scores);
+ const total =scores.reduce((acc,actualValue)=>{
+    return acc = acc + actualValue
+})
 
-
-
-
+console.log( total);
 
 
 
