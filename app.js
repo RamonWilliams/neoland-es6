@@ -98,3 +98,12 @@ const toy = {name: 'Bus laiyiar', date: '20-30-1995', color: 'multicolor'};
 const copyToy = {...toy};
 console.log(copyToy);
 
+/*3.3 Dado los siguientes arrays, crea un nuevo array juntandolos usando 
+spread operatos.*/
+const pointsList2 = [32, 54, 21, 64, 75, 43];
+const pointsLis3 = [54,87,99,65,32];
+
+ const generalPointlist = [... pointsList2, ...pointsLis3];
+ console.log(generalPointlist);
+
+ 
