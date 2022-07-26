@@ -264,8 +264,6 @@ const streamers4 = streamers2.filter((streamer) => {
  });
  
  console.log(streamers4);
-
-
  
    
 /*5.6 Dado el siguiente html y javascript, utiliza .filter() para mostrar por consola 
@@ -367,6 +365,49 @@ console.log(scores);
 })
 
 console.log( total);
+
+/*7.2 Dado el mismo array, haz una suma de todos las notas de los examenes de los 
+alumnos que esten aprobados usando la función .reduce().*/
+
+
+  const approved = exams.reduce((acc,exam)=>{
+     if(exam.score >= 5){
+        return acc + exam.score;
+     }{
+        return acc
+      }       
+     
+  },0)
+ console.log(approved);
+
+ //7.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce()
+
+
+ const notas = exams.map( nota => nota.score);
+ console.log(notas)
+
+ 
+const  media = notas.reduce((acc,nota)=>{
+    return acc + nota / notas.length
+},0
+
+)
+console.log(media);
+/*6.1 Dado el siguiente javascript filtra los videojuegos por gender = 'RPG' usando 
+.filter() y usa .reduce() para conseguir la media de sus .score. 
+La función .find() también podría ayudarte para el contrar el genero 'RPG' en el 
+array .gender.*/
+
+const videogames = [
+    {name: 'Final Fantasy VII', genders: ['RPG'], score: 9.5},
+    {name: 'Assasins Creed Valhala', genders: ['Aventura', 'RPG'], score: 4.5},
+    {name: 'The last of Us 2', genders: ['Acción', 'Aventura'], score: 9.8},
+    {name: 'Super Mario Bros', genders: ['Plataforma'], score: 8.5},
+    {name: 'Genshin Impact', genders: ['RPG', 'Aventura'], score: 7.5},
+    {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], score: 10},
+]
+
+
 
 
 
