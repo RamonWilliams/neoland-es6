@@ -395,7 +395,7 @@ const  media = notas.reduce((acc,nota)=>{
 console.log(media);
 /*6.1 Dado el siguiente javascript filtra los videojuegos por gender = 'RPG' usando 
 .filter() y usa .reduce() para conseguir la media de sus .score. 
-La función .find() también podría ayudarte para el contrar el genero 'RPG' en el 
+La función .find() también podría ayudarte para encontrar el genero 'RPG' en el 
 array .gender.*/
 
 const videogames = [
@@ -407,8 +407,12 @@ const videogames = [
     {name: 'Legend of Zelda: Breath of the wild', genders: ['RPG', 'La cosa más puto bonita que he visto nunca'], score: 10},
 ]
 
+const videGameFiltro = videogames.filter(game => game.genders.includes("RPG"));
+console.log(videGameFiltro);
 
 
+const meadia1 = videGameFiltro.reduce((acc, game) => acc + game.score /videGameFiltro.length, 0);
+console.log(meadia1)
 
 
 
